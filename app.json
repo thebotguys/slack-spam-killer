@@ -1,8 +1,8 @@
 {
   "name": "Spam Killer",
   "description": "The true bot which kills spam",
-  "website": "google.com",
-  "repository": "google.com",
+  "website": "https://google.com",
+  "repository": "https://google.com",
   "keywords": ["python", "slackbot", "slack", "bot", "spam", "antispam"],
   "env": {
     "ADMIN_LEGACY_TOKEN": {
