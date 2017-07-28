@@ -1,0 +1,29 @@
+= Spam Killer (The truly misterious spam killer bot)
+Alessandro Sanino <saninoale@gmail.com>
+
+This slack bot provides a spam wiping feature from messages. It:
+
+. Deletes messages which contain *blocked keywords*.
+. Signals users which post those messages to allow admins to *deactivate* them, by posting to a specified channel.
+
+== Setup
+You can deploy with Heroku to have everything easily setup.
+Another solution is to deploy it wherever you want and setup the environment variables properly.
+See the doc for that, called link:environment.adoc[].
+
+https://heroku.com/deploy[image:https://www.herokucdn.com/deploy/button.svg[Deploy]]
+
+== Donate
+
+Feel free to donate:
+|====
+| Paypal | https://paypal.me/AlessandroSanino
+| *BTC*  | *1DVgmv6jkUiGrnuEv1swdGRyhQsZjX9MT3*
+| XVG    | DFstPiWFXjX8UCyUCxfeVpk6JkgaLBSNvS
+| ETH    | 0x2fe7bd8a41e91e9284aada0055dbb15ecececf02
+| *USDT*  | *18obCEVmbT6MHXDcPoFwnUuCmkttLbK5Xo*
+|====
+
+=== Credits:
+I really am thankful to *@jvaljean* from *cryptosurge.xyz* slack for inspiring me and giving
+me a quick and dirty codebase to optimize, which for sure allowed this bot to be what it's now.

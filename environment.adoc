@@ -1,0 +1,41 @@
+= Handle environment
+Alessandro Sanino <saninoale@gmail.com>
+
+This document will explain how to configure the bot, using environment variables.
+
+== VAR LIST
+
+|====
+| ADMIN_LEGACY_TOKEN     | This token allows to perform admin operations, like message deletion. Please see https://api.slack.com/custom-integrations/legacy-tokens[Legacy Tokens Page]. Remember, the token must be from an admin.
+| BAN_SIGNALS_CHANNEL_ID | This is the channel ID where the bot will post ban signals.
+| BOT_TOKEN              | This is the token of the bot user which will post messages. 
+| BLOCKED_KEYWORDS       | A ; separated list of keywords. If a posted message contains one of them, it will be deleted and the user signaled.
+|====
+
+== Configuration of Environment variables in local development
+just add a .env file, structured like this:
+----
+ADMIN_LEGACY_TOKEN=FILL
+BAN_SIGNALS_CHANNEL_ID=FILL
+BLOCKED_KEYWORDS=FILL (this is a ; KEYWORDS LIST)
+BOT_TOKEN=FILL
+----
+
+Run this script to copy from deployed environment (_heroku_ only):
+[source, bash]
+----
+$ heroku config:get ADMIN_LEGACY_TOKEN -s >> .env
+$ heroku config:get BAN_SIGNALS_CHANNEL_ID -s >> .env
+$ heroku config:get BLOCKED_KEYWORDS -s >> .env
+$ heroku config:get BOT_TOKEN -s >> .env
+----
+
+==== Warning
+DON'T FORGET (if you use heroku) TO SCALE YOUR WORKERS TO 1!
+
+Here the script for free dynos:
+[source, bash]
+----
+$ #In app repository
+$ heroku ps:scale worker=1
+----

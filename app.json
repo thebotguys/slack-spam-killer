@@ -1,0 +1,29 @@
+{
+  "name": "Spam Killer",
+  "description": "The true bot which kills spam",
+  "website": "google.com",
+  "repository": "google.com",
+  "keywords": ["python", "slackbot", "slack", "bot", "spam", "antispam"],
+  "env": {
+    "ADMIN_LEGACY_TOKEN": {
+      "description": "Use it to be able to delete messages",
+      "value": "xox........",
+      "required": "true"
+    },
+    "BAN_SIGNALS_CHANNEL_ID": {
+      "description": "This is the channel ID where the bot will post ban signals.",
+      "value": "CHANNEL_ID",
+      "required": "true"
+    },
+    "BLOCKED_KEYWORDS": {
+      "description": "A ; separated list of keywords to block",
+      "value": "list;of;keywords;like;this;one",
+      "required": "true"
+    },
+    "BOT_TOKEN": {
+      "description": "The token of the bot user which will talk to Ban signals channel",
+      "value": "xox........",
+      "required": "true"
+    }
+  }
+}
