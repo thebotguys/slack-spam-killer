@@ -1,14 +1,16 @@
 = Spam Killer
 Alessandro Sanino <saninoale@gmail.com>
 
-[.text-center] 
-image:https://image.ibb.co/jfceUk/logo_spam_killer.png[title="Logo", 150, 150, role="right"]
-The truly misterious spam killer bot for slack teams.
+image:https://image.ibb.co/jfceUk/logo_spam_killer.png[150, 150]
+
+*The truly misterious spam killer bot for slack teams.*
 
 This slack bot provides a spam wiping feature from messages. It:
 
 . Deletes messages which contain *blocked keywords*.
 . Signals users which post those messages to allow admins to *deactivate* them, by posting to a specified channel.
+
+
 
 == Setup
 You can deploy with Heroku to have everything easily setup.
