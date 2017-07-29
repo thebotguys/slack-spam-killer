@@ -65,7 +65,7 @@ def handle_request(rtm_event):
                     print "my url detected, sending reaction..."
                     print SLACK_CLIENT.api_call('reactions.add', channel=channel,
                                                 name=emoji, timestamp=timestamp)
-                print "sent reaction: " + LOVE_EMOJIS
+                print "sent reaction: " + str(LOVE_EMOJIS)
             elif 'http' in text or 't.me' in text or 'telegram.me' in text:
                 print "msg ok, sending reaction..."
                 print SLACK_CLIENT.api_call('reactions.add', channel=channel,
