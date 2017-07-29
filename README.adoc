@@ -1,6 +1,7 @@
 = Spam Killer (The truly misterious spam killer bot)
 Alessandro Sanino <saninoale@gmail.com>
 
+image:https://image.ibb.co/mOZ4vQ/logo_spam_killer.png[Logo, 150, 150, role=left]
 This slack bot provides a spam wiping feature from messages. It:
 
 . Deletes messages which contain *blocked keywords*.
