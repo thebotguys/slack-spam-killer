@@ -2,7 +2,7 @@
 Alessandro Sanino <saninoale@gmail.com>
 
 [.text-center] 
-image:https://image.ibb.co/jfceUk/logo_spam_killer.png[title="Logo", 150, 150, role=right]
+image:https://image.ibb.co/jfceUk/logo_spam_killer.png[title="Logo", 150, 150, role="right"]
 The truly misterious spam killer bot for slack teams.
 
 This slack bot provides a spam wiping feature from messages. It:
