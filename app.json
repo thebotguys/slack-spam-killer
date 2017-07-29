@@ -1,6 +1,7 @@
 {
   "name": "Spam Killer",
   "description": "The true bot which kills spam",
+  "logo": "https://image.ibb.co/mOZ4vQ/logo_spam_killer.png",
   "website": "https://github.com/AlessandroSanino1994/slack-spam-killer",
   "repository": "https://github.com/AlessandroSanino1994/slack-spam-killer",
   "keywords": ["python", "slackbot", "slack", "bot", "spam", "antispam"],
