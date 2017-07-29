@@ -13,7 +13,7 @@ This slack bot provides a spam wiping feature from messages. It:
 == Setup
 You can deploy with Heroku to have everything easily setup.
 Another solution is to deploy it wherever you want and setup the environment variables properly.
-See the doc for that, called link:environment.adoc[].
+See the doc for that (link:docs/environment.adoc[environment.adoc]).
 
 https://heroku.com/deploy[image:https://www.herokucdn.com/deploy/button.svg[Deploy]]
 
