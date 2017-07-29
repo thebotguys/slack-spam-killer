@@ -10,11 +10,13 @@ import os
 
 from slackclient import SlackClient
 
+REPO_URL = 'https://github.com/AlessandroSanino1994/slack-spam-killer'
 TOKEN = os.environ['BOT_TOKEN']
 ADMIN_TOKEN = os.environ['ADMIN_LEGACY_TOKEN']
 BAN_SIGNALS_CHANNEL = os.environ['BAN_SIGNALS_CHANNEL_ID']
 BLOCKED_KEYWORDS = os.environ['BLOCKED_KEYWORDS'].split(';')
 
+LOVE_EMOJIS = ['heart', '+1', 'beers', 'clap']
 APPROVED_EMOJI = 'white_check_mark'
 
 #used to access admin feature, must be a legacy token.
@@ -39,10 +41,12 @@ def handle_request(event):
             is_adm, channel = infos['is_admin'], event['channel']
             timestamp = event['ts']
             # print str(event)
+            blocked = False
             for item in BLOCKED_KEYWORDS:
                 if item in msg:
                     # print SLACK_CLIENT.api_call('channels.info', channel=event['channel'])
                     if is_adm is False:
+                        blocked = True
                         print "found spam: <@" + str(username) + "> " + str(text) + " on " + \
                         str(channel) + '. Removing...'
                         print ADMIN_CLIENT.api_call(
@@ -54,11 +58,18 @@ def handle_request(event):
                                               ' is spamming, terminate him',
                                               as_user='true')
                         print 'message sent'
-            if is_adm is True and 'http' in text:
-                print "msg by admin, sending reaction..."
-                print SLACK_CLIENT.api_call('reactions.add', channel=channel,
-                                      name=APPROVED_EMOJI, timestamp=timestamp)
-                print "sent reaction: " + APPROVED_EMOJI
+            if not blocked:
+                if REPO_URL in text:
+                    for emoji in LOVE_EMOJIS:
+                        print "my url detected, sending reaction..."
+                        print SLACK_CLIENT.api_call('reactions.add', channel=channel,
+                                          name=emoji, timestamp=timestamp)
+                    print "sent reaction: " + LOVE_EMOJIS
+                elif 'http' in text or 't.me' in text or 'telegram.me' in text:
+                    print "msg ok, sending reaction..."
+                    print SLACK_CLIENT.api_call('reactions.add', channel=channel,
+                                                name=APPROVED_EMOJI, timestamp=timestamp)
+                    print "sent reaction: " + APPROVED_EMOJI
     except Exception as ex:
         print ex
 
