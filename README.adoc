@@ -1,5 +1,5 @@
 = Spam Killer
-Alessandro Sanino <saninoale@gmail.com>
+The Bot Guy <thebotguy@usa.com>
 
 image:https://image.ibb.co/jfceUk/logo_spam_killer.png[150, 150]
 
