@@ -23,7 +23,6 @@ https://heroku.com/deploy[image:https://www.herokucdn.com/deploy/button.svg[Depl
 
 Feel free to donate:
 |====
-| Paypal | https://paypal.me/AlessandroSanino
 | *BTC*  | *1DVgmv6jkUiGrnuEv1swdGRyhQsZjX9MT3*
 | XVG    | DFstPiWFXjX8UCyUCxfeVpk6JkgaLBSNvS
 | ETH    | 0x2fe7bd8a41e91e9284aada0055dbb15ecececf02
